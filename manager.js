@@ -8,6 +8,18 @@ document.addEventListener("mousemove", function (event) {
     mousePos = getMouseCoords(event, cvs.getBoundingClientRect());
 });
 
+let oldValue = 0
+let newValue = 0
+window.addEventListener('scroll', (e) => {
+  newValue = window.pageYOffset;
+  console.log(window.pageYOffset)
+  if (oldValue < newValue) {
+    // console.log("Up");
+  } else if (oldValue > newValue) {
+    // console.log("Down");
+  }
+  oldValue = newValue;
+});
 
 
 
@@ -23,8 +35,8 @@ var resetGrid = () => {
     //init grid
     state.grid = []
 
-    let cellLength = state.gridDensity / ctx.canvas.width
-    let num_yCells = Math.floor(ctx.canvas.width / cellLength)
+    let cellLength = ctx.canvas.width / state.gridDensity
+    let num_yCells = Math.ceil(ctx.canvas.height / cellLength)
 
     for (let x = 0; x < state.gridDensity+1; x++) {
         state.grid[x] = []
