@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Document</title>
+    <link rel='stylesheet' href='theoIndex.css'>
+    <link rel='stylesheet' href='controller.css'>
+    <link rel='stylesheet' href='plot.css'>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/d3/7.2.0/d3.min.js'></script>
+    <script src='https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js'></script>
+    <script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/Please.js'></script>
+    <script src='vec.js'></script>
+    <script src='helper.js'></script>
+    <script src='theoState.js'></script>
+    <script src='points.js'></script>
+
+</head>
+
+<body>
+    <div id="root">
+        <p>test</p>
+        <div id="tooltip" style="visibility: hidden;">
+            <div class="frame">
+                <button id="boomButton">Boom!</button>
+            </div>
+        </div>
+
+        <canvas id="canvas" width="800" height="300"></canvas>
+
+        <!-- <div>
+            <p class="header" id="header">Hjemmesidens begyndelse:</p>
+        </div>
+        <div class='textBox verticalAlign '>
+            <p class="centerText">I begyndelsen var der kun en grøn boks. Den var lidt skæv, men det var charmerende
+                nok. Så den blev ikke rettet til.</p>
+        </div>
+        <div>
+            <div class='textBox horizontalAlign '>
+                <div id="leftBlock">
+                    <p class="centerText">Efterhånden som skaberen lærte om og opdagede nye fantastiske indstillinger,
+                        begyndte hjemmesiden så småt at falde fra hinanden.</p>
+                    <div class="rotate2plus">
+                        <button id="radiusButton" onclick="randomBorderRadius()" class="button">Random border
+                            radius</button>
+                        <button onclick="randomHeaderColor()" class="button">Random header color</button>
+                    </div>
+                </div>
+                <div id="middleBlock">
+                    <p>sample</p>
+                </div>
+                <div id="rightBlock">
+
+                </div>
+
+            </div>
+        </div> -->
+    </div>
+</body>
+<script src='manager.js'></script>
+
+</html>
