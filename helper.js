@@ -9,15 +9,6 @@ function sigmoid(x, s = 1) {
     return 1 / (Math.exp(x * s) + 1)
 }
 
-// const random3Colors = () => {
-//     return Please.make_color({
-//         golden: false,
-//         full_random: true,
-//         colors_returned: 3,
-//         value: 0.85
-//     });
-// }
-
 function getMouseCoords(event, rect) {
     let scaleFactor = 1
     if (event == null) {
@@ -49,6 +40,3 @@ function handleRightClick() {
         state.showMenu = true
     }
 }
-
-
-

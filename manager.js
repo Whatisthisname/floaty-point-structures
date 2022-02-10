@@ -46,11 +46,10 @@ var start = function () {
         state.velocities[i] = new vec(uniform(-1, 1) * uniform(1, 3), uniform(-1, 1) * uniform(1, 3))
         state.pointTrails[i] = []
         for (let j = 0; j < state.trailLength; j++) {
-            // state.pointTrails[i][j] = state.points[i].lerp(state.points[i].add(state.velocities[i]), i)
-            state.pointTrails[i][j] = state.points[i].lerp(new vec(0,0), j*0.01)
+            state.pointTrails[i][j] = state.points[i].lerp(state.points[i].add(state.velocities[i]), i)
+            // state.pointTrails[i][j] = state.points[i].lerp(new vec(0,0), j*0.01)
         }
     }
-    console.log(JSON.stringify(state.pointTrails[0]))
     update(0);
 };
 

@@ -1,6 +1,6 @@
 var state = {
     showMenu: false,
-    num_p: 100,
+    num_p: 40,
     points: [],
     velocities: [],
     pointTrails: [[]],

@@ -110,7 +110,12 @@ var drawPoints = function (t) {
         var p = state.points[i];
 
         var trailEnd = state.pointTrails[i][state.trailLength - 1]
-        var gradient = ctx.createLinearGradient(p.x, p.y, trailEnd.x, trailEnd.y);
+        // var gradient = ctx.createLinearGradient(p.x, p.y, trailEnd.x, trailEnd.y);
+        // gradient.addColorStop(0, "#0000FF");
+        // gradient.addColorStop(1, '#FFFF0000');
+        // ctx.strokeStyle = gradient;
+
+        var gradient = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, trailEnd.sub(p).length());
         gradient.addColorStop(0, "#0000FF");
         gradient.addColorStop(1, '#FFFF0000');
         ctx.strokeStyle = gradient;
