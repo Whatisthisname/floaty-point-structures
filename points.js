@@ -20,7 +20,7 @@ const updatePoints = (t) => {
 
 
         for (let j = state.trailLength - 1; j > 0; j--) {
-            state.pointTrails[r][j] = state.pointTrails[r][j - 1].add(new vec(uniform(-1, 1), uniform(-1, 1)).scale(0.0001));
+            state.pointTrails[r][j] = state.pointTrails[r][j - 1].add(new vec(uniform(-1, 1), uniform(-1, 1)).scale(0.00));
             // state.pointTrails[r][j] = state.pointTrails[r][j - 1].add(0,0);
             // state.pointTrails[i][j] = state.pointTrails[i][j-1];
         }
